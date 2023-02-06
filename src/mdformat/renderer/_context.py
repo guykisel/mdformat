@@ -211,7 +211,6 @@ def _render_inline_as_text(node: RenderTreeNode, context: RenderContext) -> str:
     Don't try to use it! Spec requires to show `alt` content with
     stripped markup, instead of simple escaping.
     """
-
     def text_renderer(node: RenderTreeNode, context: RenderContext) -> str:
         return node.content
 

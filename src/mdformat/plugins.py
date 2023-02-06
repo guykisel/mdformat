@@ -47,8 +47,6 @@ class ParserExtensionInterface(Protocol):
     @staticmethod
     def update_mdit(mdit: MarkdownIt) -> None:
         """Update the parser, e.g. by adding a plugin: `mdit.use(myplugin)`"""
-
-
 def _load_parser_extensions() -> dict[str, ParserExtensionInterface]:
     parser_extension_entrypoints = importlib_metadata.entry_points(
         group="mdformat.parser_extension"
